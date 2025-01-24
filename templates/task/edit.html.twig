@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit{% endblock %}
+
+{% block body %}
+{{ form_start(form) }}
+    {{form_row(form.name)}}
+    {{form_row(form.description)}}
+    <button type="submit" class="submit">Ajouter</button>
+{{ form_end(form) }}
+{% endblock %}
+

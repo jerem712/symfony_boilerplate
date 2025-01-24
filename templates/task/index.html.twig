@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index{% endblock %}
+
+{% block body %}
+<a href="{{path('add')}}">add</a>
+
+<h1>Hello username</h1>
+
+<p>List of tasks</p>
+<ul>
+    {% for t in tasks %}
+    <li><a href="{{path('view', {id: t.id})}}">{{t.name}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

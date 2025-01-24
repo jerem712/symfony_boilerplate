@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}View{% endblock %}
+
+{% block body %}
+<a href="{{path('add')}}">add</a>
+
+<p>{{task.name}}</p>
+<p>{{task.description}}</p>
+<p>{{task.createdAt.format('d-m-Y-h:i')}}</p>
+<p>{{task.updatedAt.format('d-m-Y-h:i')}}</p>
+<p>{{task.author}}</p>
+
+<a href="{{path('edit', {id: task.id})}}">edit</a>
+<a href="{{path('delete', {id: task.id})}}">delete</a>
+{% endblock %}
